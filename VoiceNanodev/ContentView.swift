@@ -25,7 +25,6 @@ struct ContentView: View {
             }
 
             HStack {
-
                 Button(action: {
                     if !audioRecorder.isRecording {
                         audioRecorder.startRecording()
@@ -47,6 +46,14 @@ struct ContentView: View {
                 .disabled(!audioRecorder.isRecording)
             }
             
+            // Affichage du temps d'enregistrement
+            Text("Temps d'enregistrement : \(audioRecorder.formattedTime())")
+                .font(.title)
+                .padding()
+            
+            // Affichage du niveau de la voix
+            EqualizerView(level: audioRecorder.voiceLevel)
+                .padding()
             
             AudioSettingsView() // Affiche la vue des paramètres
 
