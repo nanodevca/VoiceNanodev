@@ -8,12 +8,48 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var audioRecorder = AudioRecorder()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
+
+            Text("Voice Nanodev").bold().padding(10)
+            Image(systemName: "ear")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            
+            if audioRecorder.isRecording {
+                Text("L'enregistrement a démarré...").padding()
+            } else {
+                Text("Appuyer pour démarrer l'enregistrement").padding()
+            }
+
+            HStack {
+
+                Button(action: {
+                    if !audioRecorder.isRecording {
+                        audioRecorder.startRecording()
+                    }
+                }) {
+                    Label("Start Recording", systemImage: "play.circle.fill").font(.title3).padding()
+                }
+                .cornerRadius(10)
+                .disabled(audioRecorder.isRecording)
+                
+                Button(action: {
+                    if audioRecorder.isRecording {
+                        audioRecorder.stopRecording()
+                    }
+                }) {
+                    Label("Stop Recording", systemImage: "pause.circle.fill").font(.title3).padding()
+                }
+                .cornerRadius(10)
+                .disabled(!audioRecorder.isRecording)
+            }
+            
+            
+            AudioSettingsView() // Affiche la vue des paramètres
+
         }
         .padding()
     }

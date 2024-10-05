@@ -29,9 +29,22 @@
 		B015DA6F2CB1845D00D7A041 /* VoiceNanodevUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceNanodevUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B015DA832CB18C5D00D7A041 /* Exceptions for "VoiceNanodev" folder in "VoiceNanodev" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B015DA532CB1845B00D7A041 /* VoiceNanodev */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B015DA562CB1845B00D7A041 /* VoiceNanodev */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B015DA832CB18C5D00D7A041 /* Exceptions for "VoiceNanodev" folder in "VoiceNanodev" target */,
+			);
 			path = VoiceNanodev;
 			sourceTree = "<group>";
 		};
@@ -399,6 +412,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"VoiceNanodev/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VoiceNanodev/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -424,6 +438,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"VoiceNanodev/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VoiceNanodev/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
