@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		B015DA662CB1845D00D7A041 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B015DA4C2CB1845B00D7A041 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B015DA532CB1845B00D7A041;
+			remoteInfo = VoiceNanodev;
+		};
+		B015DA702CB1845D00D7A041 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B015DA4C2CB1845B00D7A041 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B015DA532CB1845B00D7A041;
+			remoteInfo = VoiceNanodev;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B015DA542CB1845B00D7A041 /* VoiceNanodev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceNanodev.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B015DA652CB1845D00D7A041 /* VoiceNanodevTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceNanodevTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B015DA6F2CB1845D00D7A041 /* VoiceNanodevUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceNanodevUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		B015DA562CB1845B00D7A041 /* VoiceNanodev */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = VoiceNanodev;
+			sourceTree = "<group>";
+		};
+		B015DA682CB1845D00D7A041 /* VoiceNanodevTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = VoiceNanodevTests;
+			sourceTree = "<group>";
+		};
+		B015DA722CB1845D00D7A041 /* VoiceNanodevUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = VoiceNanodevUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B015DA512CB1845B00D7A041 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B015DA622CB1845D00D7A041 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B015DA6C2CB1845D00D7A041 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B015DA4B2CB1845B00D7A041 = {
+			isa = PBXGroup;
+			children = (
+				B015DA562CB1845B00D7A041 /* VoiceNanodev */,
+				B015DA682CB1845D00D7A041 /* VoiceNanodevTests */,
+				B015DA722CB1845D00D7A041 /* VoiceNanodevUITests */,
+				B015DA552CB1845B00D7A041 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B015DA552CB1845B00D7A041 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B015DA542CB1845B00D7A041 /* VoiceNanodev.app */,
+				B015DA652CB1845D00D7A041 /* VoiceNanodevTests.xctest */,
+				B015DA6F2CB1845D00D7A041 /* VoiceNanodevUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B015DA532CB1845B00D7A041 /* VoiceNanodev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B015DA792CB1845D00D7A041 /* Build configuration list for PBXNativeTarget "VoiceNanodev" */;
+			buildPhases = (
+				B015DA502CB1845B00D7A041 /* Sources */,
+				B015DA512CB1845B00D7A041 /* Frameworks */,
+				B015DA522CB1845B00D7A041 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B015DA562CB1845B00D7A041 /* VoiceNanodev */,
+			);
+			name = VoiceNanodev;
+			packageProductDependencies = (
+			);
+			productName = VoiceNanodev;
+			productReference = B015DA542CB1845B00D7A041 /* VoiceNanodev.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B015DA642CB1845D00D7A041 /* VoiceNanodevTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B015DA7C2CB1845D00D7A041 /* Build configuration list for PBXNativeTarget "VoiceNanodevTests" */;
+			buildPhases = (
+				B015DA612CB1845D00D7A041 /* Sources */,
+				B015DA622CB1845D00D7A041 /* Frameworks */,
+				B015DA632CB1845D00D7A041 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B015DA672CB1845D00D7A041 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B015DA682CB1845D00D7A041 /* VoiceNanodevTests */,
+			);
+			name = VoiceNanodevTests;
+			packageProductDependencies = (
+			);
+			productName = VoiceNanodevTests;
+			productReference = B015DA652CB1845D00D7A041 /* VoiceNanodevTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B015DA6E2CB1845D00D7A041 /* VoiceNanodevUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B015DA7F2CB1845D00D7A041 /* Build configuration list for PBXNativeTarget "VoiceNanodevUITests" */;
+			buildPhases = (
+				B015DA6B2CB1845D00D7A041 /* Sources */,
+				B015DA6C2CB1845D00D7A041 /* Frameworks */,
+				B015DA6D2CB1845D00D7A041 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B015DA712CB1845D00D7A041 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B015DA722CB1845D00D7A041 /* VoiceNanodevUITests */,
+			);
+			name = VoiceNanodevUITests;
+			packageProductDependencies = (
+			);
+			productName = VoiceNanodevUITests;
+			productReference = B015DA6F2CB1845D00D7A041 /* VoiceNanodevUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B015DA4C2CB1845B00D7A041 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					B015DA532CB1845B00D7A041 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					B015DA642CB1845D00D7A041 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = B015DA532CB1845B00D7A041;
+					};
+					B015DA6E2CB1845D00D7A041 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = B015DA532CB1845B00D7A041;
+					};
+				};
+			};
+			buildConfigurationList = B015DA4F2CB1845B00D7A041 /* Build configuration list for PBXProject "VoiceNanodev" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B015DA4B2CB1845B00D7A041;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B015DA552CB1845B00D7A041 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B015DA532CB1845B00D7A041 /* VoiceNanodev */,
+				B015DA642CB1845D00D7A041 /* VoiceNanodevTests */,
+				B015DA6E2CB1845D00D7A041 /* VoiceNanodevUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B015DA522CB1845B00D7A041 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B015DA632CB1845D00D7A041 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B015DA6D2CB1845D00D7A041 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B015DA502CB1845B00D7A041 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B015DA612CB1845D00D7A041 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B015DA6B2CB1845D00D7A041 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B015DA672CB1845D00D7A041 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B015DA532CB1845B00D7A041 /* VoiceNanodev */;
+			targetProxy = B015DA662CB1845D00D7A041 /* PBXContainerItemProxy */;
+		};
+		B015DA712CB1845D00D7A041 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B015DA532CB1845B00D7A041 /* VoiceNanodev */;
+			targetProxy = B015DA702CB1845D00D7A041 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B015DA772CB1845D00D7A041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B015DA782CB1845D00D7A041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		B015DA7A2CB1845D00D7A041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VoiceNanodev/VoiceNanodev.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VoiceNanodev/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nanodev.VoiceNanodev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B015DA7B2CB1845D00D7A041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VoiceNanodev/VoiceNanodev.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VoiceNanodev/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nanodev.VoiceNanodev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B015DA7D2CB1845D00D7A041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nanodev.VoiceNanodevTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VoiceNanodev.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VoiceNanodev";
+			};
+			name = Debug;
+		};
+		B015DA7E2CB1845D00D7A041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nanodev.VoiceNanodevTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VoiceNanodev.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VoiceNanodev";
+			};
+			name = Release;
+		};
+		B015DA802CB1845D00D7A041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nanodev.VoiceNanodevUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = VoiceNanodev;
+			};
+			name = Debug;
+		};
+		B015DA812CB1845D00D7A041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nanodev.VoiceNanodevUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = VoiceNanodev;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B015DA4F2CB1845B00D7A041 /* Build configuration list for PBXProject "VoiceNanodev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B015DA772CB1845D00D7A041 /* Debug */,
+				B015DA782CB1845D00D7A041 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B015DA792CB1845D00D7A041 /* Build configuration list for PBXNativeTarget "VoiceNanodev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B015DA7A2CB1845D00D7A041 /* Debug */,
+				B015DA7B2CB1845D00D7A041 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B015DA7C2CB1845D00D7A041 /* Build configuration list for PBXNativeTarget "VoiceNanodevTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B015DA7D2CB1845D00D7A041 /* Debug */,
+				B015DA7E2CB1845D00D7A041 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B015DA7F2CB1845D00D7A041 /* Build configuration list for PBXNativeTarget "VoiceNanodevUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B015DA802CB1845D00D7A041 /* Debug */,
+				B015DA812CB1845D00D7A041 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B015DA4C2CB1845B00D7A041 /* Project object */;
+}
