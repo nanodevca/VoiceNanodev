@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +30,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		B015DA832CB18C5D00D7A041 /* Exceptions for "VoiceNanodev" folder in "VoiceNanodev" target */ = {
+		B015DA832CB18C5D00D7A041 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -40,24 +40,9 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		B015DA562CB1845B00D7A041 /* VoiceNanodev */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				B015DA832CB18C5D00D7A041 /* Exceptions for "VoiceNanodev" folder in "VoiceNanodev" target */,
-			);
-			path = VoiceNanodev;
-			sourceTree = "<group>";
-		};
-		B015DA682CB1845D00D7A041 /* VoiceNanodevTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = VoiceNanodevTests;
-			sourceTree = "<group>";
-		};
-		B015DA722CB1845D00D7A041 /* VoiceNanodevUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = VoiceNanodevUITests;
-			sourceTree = "<group>";
-		};
+		B015DA562CB1845B00D7A041 /* VoiceNanodev */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B015DA832CB18C5D00D7A041 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = VoiceNanodev; sourceTree = "<group>"; };
+		B015DA682CB1845D00D7A041 /* VoiceNanodevTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = VoiceNanodevTests; sourceTree = "<group>"; };
+		B015DA722CB1845D00D7A041 /* VoiceNanodevUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = VoiceNanodevUITests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +185,7 @@
 				};
 			};
 			buildConfigurationList = B015DA4F2CB1845B00D7A041 /* Build configuration list for PBXProject "VoiceNanodev" */;
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -208,7 +194,6 @@
 			);
 			mainGroup = B015DA4B2CB1845B00D7A041;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = B015DA552CB1845B00D7A041 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -413,11 +398,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VoiceNanodev/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Voice Nano";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nanodev.VoiceNanodev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,11 +427,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VoiceNanodev/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Voice Nano";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nanodev.VoiceNanodev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
