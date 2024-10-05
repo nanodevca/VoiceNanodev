@@ -9,6 +9,8 @@ import AVFoundation
 
 class AudioRecorder: NSObject, NSApplicationDelegate, ObservableObject {
     
+    let BUFFER_SIZE: UInt32 = 512
+    
     @IBOutlet weak var window: NSWindow!
     
     var audioEngine: AVAudioEngine! = AVAudioEngine()
@@ -32,7 +34,7 @@ class AudioRecorder: NSObject, NSApplicationDelegate, ObservableObject {
         
         audioFile = try! AVAudioFile(forWriting: outputURL, settings: inputFormat.settings, commonFormat: inputFormat.commonFormat, interleaved: inputFormat.isInterleaved)
 
-        input.installTap(onBus: bus, bufferSize: 512, format: inputFormat) { (buffer, time) in
+        input.installTap(onBus: bus, bufferSize: BUFFER_SIZE, format: inputFormat) { (buffer, time) in
             try! self.audioFile?.write(from: buffer)
             self.analyzeAudio(buffer: buffer)
         }
