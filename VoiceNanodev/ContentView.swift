@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var audioRecorder = AudioRecorder()
+    @StateObject private var audioPlayer = AudioPlayerManager()
     
     var body: some View {
         VStack {
@@ -54,6 +55,15 @@ struct ContentView: View {
             // Affichage du niveau de la voix
             EqualizerView(level: audioRecorder.voiceLevel)
                 .padding()
+            
+            Button(action: {
+                audioPlayer.playAudio()
+            }) {
+                Label("Play last record", systemImage: "play.circle")
+                    .padding()
+                    .cornerRadius(10)
+            }
+            .disabled(audioRecorder.isRecording || !audioRecorder.isRecordReady)
             
             AudioSettingsView() // Affiche la vue des paramètres
 
