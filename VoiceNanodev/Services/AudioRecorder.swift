@@ -74,7 +74,7 @@ class AudioRecorder: NSObject, NSApplicationDelegate, ObservableObject {
                 audio: audioData,
                 sourceLanguage: "fr",
                 targetLanguage: "fr",
-                targetVoiceId: "T1Mmvjng3xi6OmMB1oGc"  // Replace with actual voice ID
+                targetVoiceId: "T1Mmvjng3xi6OmMB1oGc"
             ) { result in
                 switch result {
                 case .success(let translatedAudio):
