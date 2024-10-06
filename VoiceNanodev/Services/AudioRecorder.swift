@@ -8,6 +8,7 @@ import Cocoa
 import AVFoundation
 
 class AudioRecorder: NSObject, NSApplicationDelegate, ObservableObject {
+    static let shared = AudioRecorder()
     
     @IBOutlet weak var window: NSWindow!
     
@@ -21,6 +22,8 @@ class AudioRecorder: NSObject, NSApplicationDelegate, ObservableObject {
     @Published var isRecording = false
     @Published var recordingTime: TimeInterval = 0.0 // Temps d'enregistrement
     @Published var voiceLevel: Float = 0.0 // Niveau de la voix
+    
+    @Published var isRecordReady = false
     
     func startRecording() {
         // If sandboxed (coding), don't forget to turn on Microphone in Capabilities > App Sandbox
@@ -99,12 +102,13 @@ class AudioRecorder: NSObject, NSApplicationDelegate, ObservableObject {
                 audio: audioData,
                 sourceLanguage: "fr",
                 targetLanguage: "fr",
-                targetVoiceId: "T1Mmvjng3xi6OmMB1oGc"  // Replace with actual voice ID
+                targetVoiceId: "T1Mmvjng3xi6OmMB1oGc"
             ) { result in
                 switch result {
                 case .success(let translatedAudio):
                     // Handle the translated audio, for example, save it or play it
                     self.saveTranslatedAudio(data: translatedAudio)
+                    self.isRecordReady = true
                     print("Voice conversion successful!")
                     
                 case .failure(let error):
@@ -117,10 +121,8 @@ class AudioRecorder: NSObject, NSApplicationDelegate, ObservableObject {
     }
     
     private func saveTranslatedAudio(data: Data) {
-        let fileManager = FileManager.default
-        let documentDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let outputURL = documentDirectory.appendingPathComponent("ConvertedRecord.caf") // Save as a .caf file
-
+        let outputURL = self.getFileURL(filename: "ConvertedRecord.caf")
+        
         do {
             try data.write(to: outputURL)
             print("Translated voice saved to: \(outputURL.path)")
@@ -159,9 +161,10 @@ class AudioRecorder: NSObject, NSApplicationDelegate, ObservableObject {
         }
     }
     
-    func getFileURL() -> URL {
+    func getFileURL(filename: String = "recording.caf") -> URL {
         let fileManager = FileManager.default
         let documentDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        return documentDirectory.appendingPathComponent("recording.caf") // On utilise caf car c'est plus facile à manipuler pour une conversion ultérieur si nécessaire
+        return documentDirectory.appendingPathComponent(filename) // On utilise caf car c'est plus facile à manipuler pour une conversion ultérieur si nécessaire
     }
+    
 }
