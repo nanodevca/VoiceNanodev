@@ -9,35 +9,36 @@ import AVFoundation
 
 class AudioRecorder: NSObject, NSApplicationDelegate, ObservableObject {
     
-    let BUFFER_SIZE: UInt32 = 512
-    
     @IBOutlet weak var window: NSWindow!
     
     var audioEngine: AVAudioEngine! = AVAudioEngine()
     var audioFile: AVAudioFile? = nil
-    @Published var isRecording = false
-    
-    @Published var recordingTime: TimeInterval = 0.0 // Temps d'enregistrement
-
     private var timer: Timer?
+    private var audioBufferQueue = Data()
+    private let bufferThreshold = 512
+    let BUFFER_SIZE: UInt32 = 1024
     
+    @Published var isRecording = false
+    @Published var recordingTime: TimeInterval = 0.0 // Temps d'enregistrement
     @Published var voiceLevel: Float = 0.0 // Niveau de la voix
     
     func startRecording() {
         // If sandboxed (coding), don't forget to turn on Microphone in Capabilities > App Sandbox
         let input = audioEngine.inputNode
-        let bus = 0
-        let inputFormat = input.inputFormat(forBus: bus)
+            let bus = 0
+            let inputFormat = input.inputFormat(forBus: bus)
 
-        let outputURL = getFileURL()
-        print("Fichier audio enregistré à : \(outputURL.path)")
-        
-        audioFile = try! AVAudioFile(forWriting: outputURL, settings: inputFormat.settings, commonFormat: inputFormat.commonFormat, interleaved: inputFormat.isInterleaved)
+            input.installTap(onBus: bus, bufferSize: BUFFER_SIZE, format: inputFormat) { (buffer, time) in
+                let audioData = self.convertBufferToData(buffer: buffer, format: inputFormat)
+                self.audioBufferQueue.append(audioData)
+                
+                if self.audioBufferQueue.count >= self.bufferThreshold {
+                    self.streamAudioToElevenLabs(audioData: self.audioBufferQueue)
+                    self.audioBufferQueue.removeAll() // Clear the buffer
+                }
 
-        input.installTap(onBus: bus, bufferSize: BUFFER_SIZE, format: inputFormat) { (buffer, time) in
-            try! self.audioFile?.write(from: buffer)
-            self.analyzeAudio(buffer: buffer)
-        }
+                self.analyzeAudio(buffer: buffer) // For visual feedback
+            }
         
         do {
             try self.audioEngine.start()
@@ -46,6 +47,30 @@ class AudioRecorder: NSObject, NSApplicationDelegate, ObservableObject {
             print("Enregistrement démarré")
         } catch {
             print("Erreur lors du démarrage de l'audioEngine: \(error.localizedDescription)")
+        }
+    }
+    
+    private func convertBufferToData(buffer: AVAudioPCMBuffer, format: AVAudioFormat) -> Data {
+        let audioBuffer = buffer.audioBufferList.pointee.mBuffers
+        let audioData = Data(bytes: audioBuffer.mData!, count: Int(audioBuffer.mDataByteSize))
+        return audioData
+    }
+    
+    func streamAudioToElevenLabs(audioData: Data) {
+        VoiceConvertion.shared.convert(
+            audio: audioData,
+            sourceLanguage: "fr",
+            targetLanguage: "fr",
+            targetVoiceId: "T1Mmvjng3xi6OmMB1oGc"
+        ) { result in
+            switch result {
+            case .success(let translatedAudio):
+                // Play or handle the translated audio in real-time
+                print("Real-time voice conversion successful!")
+                
+            case .failure(let error):
+                print("Voice conversion failed: \(error.localizedDescription)")
+            }
         }
     }
 
