@@ -58,9 +58,52 @@ class AudioRecorder: NSObject, NSApplicationDelegate, ObservableObject {
             stopTimer()
             self.isRecording = false
             print("Enregistrement arrêté")
+
+            // Now we convert the recorded audio to a different voice
+            convertRecordedVoice()
         }
     }
     
+    private func convertRecordedVoice() {
+        let fileURL = getFileURL()
+        
+        do {
+            let audioData = try Data(contentsOf: fileURL) // Load audio file as data
+            
+            VoiceConvertion.shared.convert(
+                audio: audioData,
+                sourceLanguage: "fr",
+                targetLanguage: "fr",
+                targetVoiceId: "T1Mmvjng3xi6OmMB1oGc"
+            ) { result in
+                switch result {
+                case .success(let translatedAudio):
+                    // Handle the translated audio, for example, save it or play it
+                    self.saveTranslatedAudio(data: translatedAudio)
+                    print("Voice conversion successful!")
+                    
+                case .failure(let error):
+                    print("Voice conversion failed: \(error.localizedDescription)")
+                }
+            }
+        } catch {
+            print("Error reading recorded audio: \(error.localizedDescription)")
+        }
+    }
+    
+    private func saveTranslatedAudio(data: Data) {
+        let fileManager = FileManager.default
+        let documentDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let outputURL = documentDirectory.appendingPathComponent("ConvertedRecord.caf") // Save as a .caf file
+
+        do {
+            try data.write(to: outputURL)
+            print("Translated voice saved to: \(outputURL.path)")
+        } catch {
+            print("Error saving translated voice: \(error.localizedDescription)")
+        }
+    }
+
     private func startTimer() {
         recordingTime = 0.0
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
@@ -97,4 +140,3 @@ class AudioRecorder: NSObject, NSApplicationDelegate, ObservableObject {
         return documentDirectory.appendingPathComponent("recording.caf") // On utilise caf car c'est plus facile à manipuler pour une conversion ultérieur si nécessaire
     }
 }
-
